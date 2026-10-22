@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #6b7280;
+}
+
+/* Kartu informasi */
+.summary-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.summary-card p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.summary-card strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 28px;
+    color: #2563eb;
+}
+
+/* Form pencarian */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 0 0 24px;
+}
+
+.search-form label {
+    flex-shrink: 0;
+    margin: 0;
+    line-height: 1.5;
+    color: #374151;
+    font-weight: 500;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    height: 46px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 15px;
+}
+
+.search-form input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.search-form button {
+    flex-shrink: 0;
+    height: 46px;
+    padding: 0 22px;
+    border-radius: 8px;
+    background-color: #2563eb;
+    font-weight: 600;
+}
+
+.search-form button:hover {
+    background-color: #1d4ed8;
+    opacity: 1;
+}
+
+.search-form a {
+    flex-shrink: 0;
+    color: #4b5563;
+    text-decoration: none;
+}
+
+.search-form a:hover {
+    color: #1d4ed8;
+}
+
+
+/* Tombol dan tautan */
+button,
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    opacity: 0.85;
+}
+
+.button-create {
+    margin-bottom: 20px;
+    background-color: #2563eb;
+}
+
+.button-secondary {
+    background-color: #6b7280;
+}
+
+.button-edit {
+    background-color: #d97706;
+}
+
+.button-delete {
+    background-color: #dc2626;
+}
+
+/* Tabel tiket */
+.table-wrapper {
+    overflow-x: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+thead {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Label status tiket */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-open {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-progress {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-closed {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Form tambah dan edit tiket */
+.form-card {
+    max-width: 700px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.error-message {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-buttons form {
+    margin: 0;
+}
+
+/* Tampilan untuk layar kecil */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .form-card {
+        padding: 18px;
+    }
+}
+
+/* Tombol Create Ticket */
+.button-create {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 20px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.18);
+    transition: background 0.2s ease, transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.button-create:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+    opacity: 1;
+}
+
+.button-create:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.3);
+    outline-offset: 3px;
+}
+
+
+.success-message {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.search-form {
+    align-items: center;
+}
+
+.search-form input {
+    width: auto;
+}
+
+.search-form button,
+.search-form .button {
+    flex: 0 0 auto;
+}
+
+.button-create {
+    margin-bottom: 0;
+}
+
+.action-buttons {
+    min-width: 130px;
+}
+
+.action-buttons .button,
+.action-buttons button {
+    white-space: nowrap;
+}
+
+.action-buttons form {
+    display: inline;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+}
